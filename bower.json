@@ -1,0 +1,18 @@
+{
+  "name": "angular-elastic-svg-elements",
+  "description": "Adding elasticity with SVG shape animations for enhanced UI interactions. (Angular implementation of ElasticSVGElements",
+  "version": "0.0.0",
+  "homepage": "https://github.com/pierre-luc/AngularElasticSVGElements",
+  "authors": [
+    "pierreluc.blot@gmail.com <Pierre-Luc BLOT>"
+  ],
+  "license": "",
+  "private": false,
+  "dependencies": {
+    "angular": "1.4.x",
+    "ryanmullins-angular-hammer": "2.1.10",
+    "Snap.svg": "^0.4.1",
+    "html5shiv": "^3.7.3",
+    "classie": "^1.0.1"
+  }
+}
