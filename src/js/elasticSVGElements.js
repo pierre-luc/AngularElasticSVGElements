@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('elasticSVGElements', [
-   'elasticSVGElementsButton',
-   'elasticSVGElementsInput',
-    'elasticSVGElementsDropdown'
+    'elasticSVGElementsButton',
+    'elasticSVGElementsInput',
+    'elasticSVGElementsDropdown',
+    'elasticSVGElementsCollapser',
+    'elasticSVGElementsExpander'
 ]);

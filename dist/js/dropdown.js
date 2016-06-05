@@ -40,7 +40,7 @@
             classie.add( self.el, 'menu--open' );
         }
 
-        this.pathEl.stop().animate( { 'path' : this.paths.open }, 320, mina.easeinout, function() {
+        this.pathEl.stop().animate( { 'path' : this.paths.open }, 420, mina.easeinout, function() {
             self.pathEl.stop().animate( { 'path' : self.paths.reset }, 1000, mina.elastic );
         } );
 

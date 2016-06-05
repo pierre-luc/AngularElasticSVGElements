@@ -65,6 +65,21 @@
 	margin: 0;
 }
 
+.box .content {
+	background: none;
+	color: #F5F5F5;
+	border: none;
+	height: 30px;
+	line-height: 25px;
+	position: absolute;
+	left: 10%;
+	right: 10%;
+	top: 10.5%;
+	outline: none;
+	padding: 10%;
+	margin: 0;
+}
+
 .trigger .fa-compress,
 .box--sizeup .trigger .fa-expand {
 	display: none;
