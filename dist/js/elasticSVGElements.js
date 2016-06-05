@@ -2,5 +2,6 @@
 
 angular.module('elasticSVGElements', [
    'elasticSVGElementsButton',
-   'elasticSVGElementsInput'
+   'elasticSVGElementsInput',
+    'elasticSVGElementsDropdown'
 ]);
