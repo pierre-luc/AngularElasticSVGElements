@@ -21,3 +21,4 @@ Read more here: [License](http://tympanus.net/codrops/licensing/)
     - Expander
     - Hamburger
     - Circle Menu
+    - Pullup Menu
