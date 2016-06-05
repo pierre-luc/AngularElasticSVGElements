@@ -19,3 +19,4 @@ Read more here: [License](http://tympanus.net/codrops/licensing/)
     - Dropdowns
     - Collapser
     - Expander
+    - Hamburger
