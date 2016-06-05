@@ -12,6 +12,19 @@
 	margin-top: 1em;
 }
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: #FF75AF;
+}
+::-moz-placeholder { /* Firefox 19+ */
+	color: #FF75AF;
+}
+:-ms-input-placeholder { /* IE 10+ */
+	color: #FF75AF;
+}
+:-moz-placeholder { /* Firefox 18- */
+	color: #FF75AF;
+}
+
 .input-label {
 	font-weight: bold;
 	display: inline-block;

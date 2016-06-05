@@ -15,3 +15,4 @@ Read more here: [License](http://tympanus.net/codrops/licensing/)
 ##Components implemented
 
     - Buttons
+    - Inputs

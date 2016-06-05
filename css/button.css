@@ -76,12 +76,14 @@
 
 /* Example for effect */
 
-.button--anim-1 .button__text {
+.button[effect=poke] .button__text,
+.button[data-effect=poke] .button__text{
 	-webkit-transition: -webkit-transform 0.15s;
 	transition: transform 0.15s;
 }
 
-.button--anim-1:active .button__text {
+.button[effect=poke]:active .button__text,
+.button[data-effect=poke]:active .button__text{
 	-webkit-transform: translate3d(0, -5px, 0);
 	transform: translate3d(0, -5px, 0);
 }
