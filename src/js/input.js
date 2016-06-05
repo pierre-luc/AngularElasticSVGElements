@@ -70,7 +70,7 @@
                     }
                 }
             }
-        }
+        };
     };
 
     angular.module('elasticSVGElementsInput', [])
@@ -83,14 +83,14 @@
                     label: '@label'
                 },
                 template:
-                        '<div class="input-wrap">'
-                +           '<input type="text" placeholder="{{label}}"/>'
-                +           '<span class="morph-shape" data-morph-active="' + effects.shrink.active + '">'
-                +               '<svg width="100%" height="100%" viewBox="0 0 370 80" preserveAspectRatio="none">'
-                +                   '<path d="' + effects.shrink.path + '"/>'
-                +               '</svg>'
-                +           '</span>'
-                +       '</div>',
+                        '<div class="input-wrap">' +
+                            '<input type="text" placeholder="{{label}}"/>' +
+                            '<span class="morph-shape" data-morph-active="' + effects.shrink.active + '">' +
+                                '<svg width="100%" height="100%" viewBox="0 0 370 80" preserveAspectRatio="none">' +
+                                    '<path d="' + effects.shrink.path + '"/>' +
+                                '</svg>' +
+                            '</span>' +
+                        '</div>',
                 compile: compile
             };
         })
@@ -104,20 +104,20 @@
                     bindID: '@bindID'
                 },
                 template:
-                    '<div class="input-container input-container--indent">'
-                +       '<div class="input-wrap input-wrap--small">'
-                +           '<input type="checkbox" id="{{bindID}}" />'
-                +               '<i class="fa fa-fw fa-check"></i>'
-                +               '<span class="morph-shape" data-morph-active="M273,273c0,0-55.8,24-123,24c-78.2,0-123-24-123-24S3,235.3,3,150C3,79.936,27,27,27,27S72,3,150,3c85,0,123,24,123,24s24,38.43,24,123C297,229.646,273,273,273,273z">'
-                +                   '<svg width="100%" height="100%" viewBox="0 0 300 300" preserveAspectRatio="none">'
-                +                       '<path d="M273,273c0,0-55.8,0-123,0c-78.2,0-123,0-123,0s0-37.7,0-123c0-70.064,0-123,0-123s45,0,123,0c85,0,123,0,123,0s0,38.43,0,123C273,229.646,273,273,273,273z"/>'
-                +                   '</svg>'
-                +               '</span>'
-                +       '</div>'
-                +       '<label class="input-label input-label--long" for="{{bindID}}" ng-transclude></label>'
-                +  '</div>',
+                    '<div class="input-container input-container--indent">' +
+                        '<div class="input-wrap input-wrap--small">' +
+                            '<input type="checkbox" id="{{bindID}}" />' +
+                                '<i class="fa fa-fw fa-check"></i>' +
+                                '<span class="morph-shape" data-morph-active="M273,273c0,0-55.8,24-123,24c-78.2,0-123-24-123-24S3,235.3,3,150C3,79.936,27,27,27,27S72,3,150,3c85,0,123,24,123,24s24,38.43,24,123C297,229.646,273,273,273,273z">' +
+                                    '<svg width="100%" height="100%" viewBox="0 0 300 300" preserveAspectRatio="none">' +
+                                        '<path d="M273,273c0,0-55.8,0-123,0c-78.2,0-123,0-123,0s0-37.7,0-123c0-70.064,0-123,0-123s45,0,123,0c85,0,123,0,123,0s0,38.43,0,123C273,229.646,273,273,273,273z"/>' +
+                                    '</svg>' +
+                                '</span>' +
+                        '</div>' +
+                        '<label class="input-label input-label--long" for="{{bindID}}" ng-transclude></label>' +
+                   '</div>',
                 compile: compile
-            }
+            };
         })
 
         .directive('elasticRadio', function(){
@@ -129,19 +129,19 @@
                     bindID: '@bindID'
                 },
                 template:
-                    '<div class="input-container input-container--indent input-container--space">'
-                +       '<div class="input-wrap input-wrap--small">'
-                +           '<input type="radio" id="{{bindID}}" name="radiogroup" />'
-                +           '<i class="fa fa-fw fa-circle"></i>'
-                +           '<span class="morph-shape" data-morph-active="M251,150c0,71.797-29.203,149-101,149S49,221.797,49,150S78.203,1,150,1S251,78.203,251,150z">'
-                +               '<svg width="100%" height="100%" viewBox="0 0 300 300" preserveAspectRatio="none">'
-                +                   '<path d="M281,150c0,71.797-59.203,131-131,131S19,221.797,19,150S78.203,19,150,19S281,78.203,281,150z"/>'
-                +               '</svg>'
-                +           '</span>'
-                +       '</div>'
-                +       '<label class="input-label input-label--long" for="{{bindID}}" ng-transclude></label>'
-                +   '</div>',
+                    '<div class="input-container input-container--indent input-container--space">' +
+                        '<div class="input-wrap input-wrap--small">' +
+                            '<input type="radio" id="{{bindID}}" name="radiogroup" />' +
+                            '<i class="fa fa-fw fa-circle"></i>' +
+                            '<span class="morph-shape" data-morph-active="M251,150c0,71.797-29.203,149-101,149S49,221.797,49,150S78.203,1,150,1S251,78.203,251,150z">' +
+                                '<svg width="100%" height="100%" viewBox="0 0 300 300" preserveAspectRatio="none">' +
+                                    '<path d="M281,150c0,71.797-59.203,131-131,131S19,221.797,19,150S78.203,19,150,19S281,78.203,281,150z"/>' +
+                                '</svg>' +
+                            '</span>' +
+                        '</div>' +
+                        '<label class="input-label input-label--long" for="{{bindID}}" ng-transclude></label>' +
+                    '</div>',
                 compile: compile
-            }
-        })
+            };
+        });
 })();

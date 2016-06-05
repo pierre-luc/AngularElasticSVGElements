@@ -89,23 +89,23 @@
 
 
     var buttons = {
-        rectangle: '<button class="button button--{{type}} button--effect-1">'
-        +       '<span class="morph-shape" data-morph-active>'
-        +           '<svg width="100%" height="100%" viewBox="0 0 300 125" preserveAspectRatio="none">'
-        +               '<path d/>'
-        +           '</svg>'
-        +       '</span>'
-        +       '<span class="button__text" ng-transclude></span>'
-        +   '</button>',
+        rectangle: '<button class="button button--{{type}} button--effect-1">' +
+                '<span class="morph-shape" data-morph-active>' +
+                    '<svg width="100%" height="100%" viewBox="0 0 300 125" preserveAspectRatio="none">' +
+                        '<path d/>' +
+                    '</svg>' +
+                '</span>' +
+                '<span class="button__text" ng-transclude></span>' +
+            '</button>',
 
-        round: '<button class="button button--{{type}} button--round button--effect-1">'
-        +       '<span class="morph-shape" data-morph-active>'
-        +           '<svg width="100%" height="100%" viewBox="0 0 300 300" preserveAspectRatio="none">'
-        +               '<path d/>'
-        +           '</svg>'
-        +       '</span>'
-        +       '<span class="button__text" ng-transclude></span>'
-        +   '</button>'
+        round: '<button class="button button--{{type}} button--round button--effect-1">' +
+                '<span class="morph-shape" data-morph-active>' +
+                    '<svg width="100%" height="100%" viewBox="0 0 300 300" preserveAspectRatio="none">' +
+                        '<path d/>' +
+                    '</svg>' +
+                '</span>' +
+                '<span class="button__text" ng-transclude></span>' +
+            '</button>'
     };
 
     function prepareDirective(buttonType){
@@ -133,10 +133,10 @@
                             }
                         }
                     }
-                }
+                };
             }
         };
-    };
+    }
 
     angular.module('elasticSVGElementsButton', [])
         .directive('elasticButton', function(){
@@ -144,5 +144,5 @@
         })
         .directive('elasticRoundButton', function(){
             return prepareDirective(buttons.round);
-        })
+        });
 })();

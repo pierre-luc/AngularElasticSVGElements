@@ -60,7 +60,7 @@
                     }
                 }
             }
-        }
+        };
     };
 
     angular.module('elasticSVGElementsPullupMenu', [])
@@ -73,19 +73,18 @@
                     label: '@label'
                 },
                 template:
-                    '<nav class="menu">'
-                +       '<button class="menu__handle"><span>{{label}}</span></button>'
-                +           '<div class="menu__inner">'
-                +              '<ul ng-transclude></ul>'
-                +           '</div>'
-                +           '<div class="morph-shape" data-morph-open="M-10,100c0,0,44-95,290-95c232,0,290,95,290,95" data-morph-close="M-10,100c0,0,44,95,290,95c232,0,290-95,290-95">'
-                +               '<svg width="100%" height="100%" viewBox="0 0 560 200" preserveAspectRatio="none">'
-                +                   '<path fill="none" d="M-10,100c0,0,44,0,290,0c232,0,290,0,290,0"/>'
-                +               '</svg>'
-                +           '</div>'
-                +   '</nav>',
+                    '<nav class="menu">' +
+                        '<button class="menu__handle"><span>{{label}}</span></button>' +
+                            '<div class="menu__inner">' +
+                               '<ul ng-transclude></ul>' +
+                            '</div>' +
+                            '<div class="morph-shape" data-morph-open="M-10,100c0,0,44-95,290-95c232,0,290,95,290,95" data-morph-close="M-10,100c0,0,44,95,290,95c232,0,290-95,290-95">' +
+                                '<svg width="100%" height="100%" viewBox="0 0 560 200" preserveAspectRatio="none">' +
+                                    '<path fill="none" d="M-10,100c0,0,44,0,290,0c232,0,290,0,290,0"/>' +
+                                '</svg>' +
+                            '</div>' +
+                    '</nav>',
                 compile: compile
             };
-        })
-
+        });
 })();

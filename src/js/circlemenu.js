@@ -54,7 +54,7 @@
                     }
                 }
             }
-        }
+        };
     };
 
     angular.module('elasticSVGElementsCircleMenu', [])
@@ -67,17 +67,16 @@
                 },
                 transclude: true,
                 template:
-                    '<nav id="menu" class="menu">'
-                +       '<span class="morph-shape" data-morph-active="M251,150c0,93.5-29.203,143-101,143S49,243.5,49,150C49,52.5,78.203,7,150,7S251,51.5,251,150z">'
-                +           '<svg width="100%" height="100%" viewBox="0 0 300 300" preserveAspectRatio="none">'
-                +               '<path d="M281,150c0,71.797-59.203,131-131,131S19,221.797,19,150S78.203,19,150,19S281,78.203,281,150z"/>'
-                +           '</svg>'
-                +       '</span>'
-                +       '<button class="trigger"><i class="fa fa-fw fa-share"></i><span>{{label}}</span></button>'
-                +       '<ul class="menu__items" ng-transclude></ul>'
-                +   '</nav>',
+                    '<nav id="menu" class="menu">' +
+                        '<span class="morph-shape" data-morph-active="M251,150c0,93.5-29.203,143-101,143S49,243.5,49,150C49,52.5,78.203,7,150,7S251,51.5,251,150z">' +
+                            '<svg width="100%" height="100%" viewBox="0 0 300 300" preserveAspectRatio="none">' +
+                                '<path d="M281,150c0,71.797-59.203,131-131,131S19,221.797,19,150S78.203,19,150,19S281,78.203,281,150z"/>' +
+                            '</svg>' +
+                        '</span>' +
+                        '<button class="trigger"><i class="fa fa-fw fa-share"></i><span>{{label}}</span></button>' +
+                        '<ul class="menu__items" ng-transclude></ul>' +
+                    '</nav>',
                 compile: compile
             };
-        })
-
+        });
 })();

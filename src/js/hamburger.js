@@ -1,5 +1,6 @@
 (function(){
     'use strict';
+
     function SVGHamburger( el, options ) {
         this.el = el;
         this.init();
@@ -61,7 +62,7 @@
                     }
                 }
             }
-        }
+        };
     };
 
     angular.module('elasticSVGElementsHamburger', [])
@@ -70,17 +71,16 @@
                 restrict: 'E',
                 replace: true,
                 template:
-                    '<button class="menu-button">'
-                +       '<span id="morph-shape" class="morph-shape" data-morph-open="M3,20c0,0,12-4,27-4s27,4,27,4;M3,60c0,0,12,4,27,4s27-4,27-4" data-morph-close="M3,20c0,0,12,4,27,4s27-4,27-4;M3,60c0,0,12-4,27-4s27,4,27,4">'
-                +           '<svg width="100%" height="100%" viewBox="0 0 60 80" preserveAspectRatio="none">'
-                +               '<path d="M3,20c0,0,12,0,27,0s27,0,27,0"/>'
-                +               '<line x1="3" y1="40" x2="57" y2="40"/>'
-                +               '<path d="M3,60c0,0,12,0,27,0s27,0,27,0"/>'
-                +           '</svg>'
-                +       '</span>'
-                +   '</button>',
+                    '<button class="menu-button">' +
+                        '<span id="morph-shape" class="morph-shape" data-morph-open="M3,20c0,0,12-4,27-4s27,4,27,4;M3,60c0,0,12,4,27,4s27-4,27-4" data-morph-close="M3,20c0,0,12,4,27,4s27-4,27-4;M3,60c0,0,12-4,27-4s27,4,27,4">' +
+                            '<svg width="100%" height="100%" viewBox="0 0 60 80" preserveAspectRatio="none">' +
+                                '<path d="M3,20c0,0,12,0,27,0s27,0,27,0"/>' +
+                                '<line x1="3" y1="40" x2="57" y2="40"/>' +
+                                '<path d="M3,60c0,0,12,0,27,0s27,0,27,0"/>' +
+                            '</svg>' +
+                        '</span>' +
+                    '</button>',
                 compile: compile
             };
-        })
-
+        });
 })();
