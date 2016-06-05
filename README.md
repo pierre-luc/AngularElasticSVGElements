@@ -12,6 +12,10 @@ Integrate or build upon it for free in your personal or commercial projects. Don
 Read more here: [License](http://tympanus.net/codrops/licensing/)
 
 
+##Installation
+
+    bower install angularElasticSVGElements
+
 ##Components implemented
 
     - Buttons

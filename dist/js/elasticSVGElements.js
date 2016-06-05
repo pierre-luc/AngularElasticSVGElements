@@ -489,11 +489,12 @@
                 replace: true,
                 transclude: true,
                 scope: {
-                    label: '@label'
+                    label: '@label',
+                    type: '@type'
                 },
                 template:
                         '<div class="input-wrap">' +
-                            '<input type="text" placeholder="{{label}}"/>' +
+                            '<input type="{{type}}" placeholder="{{label}}"/>' +
                             '<span class="morph-shape" data-morph-active="' + effects.shrink.active + '">' +
                                 '<svg width="100%" height="100%" viewBox="0 0 370 80" preserveAspectRatio="none">' +
                                     '<path d="' + effects.shrink.path + '"/>' +
