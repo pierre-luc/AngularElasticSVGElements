@@ -20,3 +20,4 @@ Read more here: [License](http://tympanus.net/codrops/licensing/)
     - Collapser
     - Expander
     - Hamburger
+    - Circle Menu

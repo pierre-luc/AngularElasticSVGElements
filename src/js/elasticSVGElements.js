@@ -6,5 +6,6 @@ angular.module('elasticSVGElements', [
     'elasticSVGElementsDropdown',
     'elasticSVGElementsCollapser',
     'elasticSVGElementsExpander',
-    'elasticSVGElementsHamburger'
+    'elasticSVGElementsHamburger',
+    'elasticSVGElementsCircleMenu'
 ]);
