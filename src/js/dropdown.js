@@ -71,7 +71,7 @@
                     label: '@label'
                 },
                 template:
-                    '<nav class="menu">' +
+                    '<nav class="dropdown menu">' +
                         '<div class="morph-shape" data-morph-open="M260,500H0c0,0,8-120,8-250C8,110,0,0,0,0h260c0,0-8,110-8,250C252,380,260,500,260,500z">' +
                             '<svg width="100%" height="100%" viewBox="0 0 260 500" preserveAspectRatio="none">' +
                                 '<path fill="none" d="M260,500H0c0,0,0-120,0-250C0,110,0,0,0,0h260c0,0,0,110,0,250C260,380,260,500,260,500z"/>' +

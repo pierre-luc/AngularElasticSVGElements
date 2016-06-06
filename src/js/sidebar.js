@@ -69,7 +69,7 @@
                 },
                 transclude: true,
                 template:
-                    '<nav id="menu" class="menu">' +
+                    '<nav class="sidebar menu">' +
                         '<button class="menu__handle"><span>{{label}}</span></button>' +
                         '<div class="menu__inner">' +
                             '<ul ng-transclude></ul>' +

@@ -1,4 +1,4 @@
-.menu {
+.dropdown.menu {
 	width: 300px;
 	height: 70px;
 	margin: 2em auto;
@@ -8,7 +8,7 @@
 	z-index: 100;
 }
 
-.menu__label {
+.dropdown .menu__label {
 	display: block;
 	background: none;
 	border: none;
@@ -24,8 +24,8 @@
 	-webkit-tap-highlight-color: transparent; /* For some Androids */
 }
 
-.menu__inner li a span,
-.menu__label span {
+.dropdown .menu__inner li a span,
+.dropdown .menu__label span {
 	font-size: 0.68em;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -33,14 +33,14 @@
 	font-weight: 600;
 }
 
-.menu .fa {
+.dropdown.menu .fa {
 	vertical-align: top;
 	line-height: 1.25;
 	margin-right: 0.65em;
 	font-size: 1.15em;
 }
 
-.menu__inner {
+.dropdown .menu__inner {
 	list-style: none;
 	padding: 0 1.25em;
 	font-size: 1.3em;
@@ -52,11 +52,11 @@
 	transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
-.menu.menu--open .menu__inner {
+.dropdown.menu.menu--open .menu__inner {
 	height: 310px;
 }
 
-.menu__inner li a {
+.dropdown .menu__inner li a {
 	display: block;
 	padding: 0.53em 0;
 	line-height: 1.2;
@@ -70,64 +70,64 @@
 	transition: opacity 0.3s, transform 0.3s;
 }
 
-.menu__inner li a:hover {
+.dropdown .menu__inner li a:hover {
 	color: #45484A;
 }
 
-.menu--open .menu__inner li a {
+.dropdown.menu--open .menu__inner li a {
 	opacity: 1;
 	pointer-events: auto;
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 }
 
-.menu--open .menu__inner li:nth-child(2) a {
+.dropdown .menu--open .menu__inner li:nth-child(2) a {
 	-webkit-transition-delay: 0.04s;
 	transition-delay: 0.04s;
 }
 
-.menu--open .menu__inner li:nth-child(3) a {
+.dropdown.menu--open .menu__inner li:nth-child(3) a {
 	-webkit-transition-delay: 0.08s;
 	transition-delay: 0.08s;
 }
 
-.menu--open .menu__inner li:nth-child(4) a {
+.dropdown.menu--open .menu__inner li:nth-child(4) a {
 	-webkit-transition-delay: 0.12s;
 	transition-delay: 0.12s;
 }
 
-.menu--open .menu__inner li:nth-child(5) a {
+.dropdown.menu--open .menu__inner li:nth-child(5) a {
 	-webkit-transition-delay: 0.16s;
 	transition-delay: 0.16s;
 }
 
-.menu--open .menu__inner li:nth-child(6) a {
+.dropdown.menu--open .menu__inner li:nth-child(6) a {
 	-webkit-transition-delay: 0.2s;
 	transition-delay: 0.2s;
 }
 
-.morph-shape,
-.morph-shape svg {
+.dropdown .morph-shape,
+.dropdown .morph-shape svg {
 	position: absolute;
 	width: 100%;
 	top: 0;
 	left: 0;
 }
 
-.morph-shape {
+.dropdown .morph-shape {
 	height: 70px;
 	-webkit-transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1);
 	transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
-.morph-shape svg {
+.dropdown .morph-shape svg {
 	height: 100%;
 }
 
-.menu.menu--open .morph-shape {
+.dropdown.menu.menu--open .morph-shape {
 	height: 400px;
 }
 
-.morph-shape svg path {
+.dropdown .morph-shape svg path {
 	fill: #C6CFCF;
 }
