@@ -68,7 +68,8 @@
                 replace: true,
                 transclude: true,
                 scope: {
-                    label: '@label'
+                    label: '@label',
+                    icon: '@icon'
                 },
                 template:
                     '<nav class="dropdown menu">' +
@@ -77,7 +78,7 @@
                                 '<path fill="none" d="M260,500H0c0,0,0-120,0-250C0,110,0,0,0,0h260c0,0,0,110,0,250C260,380,260,500,260,500z"/>' +
                             '</svg>' +
                         '</div>' +
-                        '<button class="menu__label"><i class="fa fa-fw fa-bars"></i><span>{{label}}</span></button>' +
+                        '<button class="menu__label"><i class="{{icon==\'\' ? \'fa fa-fw fa-bars\' : icon}}"></i><span>{{label}}</span></button>' +
                         '<ul class="menu__inner" ng-transclude></ul>' +
                     '</nav>',
                 compile: compile
