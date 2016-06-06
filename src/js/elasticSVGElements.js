@@ -12,6 +12,7 @@
      * @requires hamburger.js
      * @requires circlemenu.js
      * @requires pullupmenu.js
+     * @requires sidebar.js
      */
     angular.module('elasticSVGElements', [
         'elasticSVGElementsButton',
@@ -21,7 +22,8 @@
         'elasticSVGElementsExpander',
         'elasticSVGElementsHamburger',
         'elasticSVGElementsCircleMenu',
-        'elasticSVGElementsPullupMenu'
+        'elasticSVGElementsPullupMenu',
+        'elasticSVGElementsSidebar'
     ]);
 
 })();
