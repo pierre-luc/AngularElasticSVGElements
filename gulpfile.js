@@ -22,8 +22,8 @@ gulp.task('js', function(){
         .on('error', function(err) {
             console.log(err.message);
         })
-        .pipe(jshint()) // run their contents through jshint
-        .pipe(jshint.reporter('default')) // report any findings from jshint
+        // .pipe(jshint()) // run their contents through jshint
+        // .pipe(jshint.reporter('default')) // report any findings from jshint
         .pipe(concat( nameOfProject + '.js')) // concatenate all of the file contents into a file titled 'all.js'
         .pipe(fileinclude({
             prefix: '//@',

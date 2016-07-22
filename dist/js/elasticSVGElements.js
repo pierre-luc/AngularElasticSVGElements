@@ -491,11 +491,12 @@
                 transclude: true,
                 scope: {
                     label: '@label',
-                    type: '@type'
+                    type: '@type',
+                    model: '=ngModel'
                 },
                 template:
                         '<div class="input-wrap">' +
-                            '<input type="{{type}}" placeholder="{{label}}"/>' +
+                            '<input type="{{type}}" ng-model="model" placeholder="{{label}}"/>' +
                             '<span class="morph-shape" data-morph-active="' + effects.shrink.active + '">' +
                                 '<svg width="100%" height="100%" viewBox="0 0 370 80" preserveAspectRatio="none">' +
                                     '<path d="' + effects.shrink.path + '"/>' +
