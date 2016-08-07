@@ -78,7 +78,8 @@
                 replace: true,
                 transclude: true,
                 scope: {
-                    label: '@label'
+                    label: '@label',
+                    open: '='
                 },
                 template:
                     '<nav class="menu">' +
@@ -94,14 +95,14 @@
                     '</nav>',
                 compile: compile,
                 controller: function($scope){
-                  $scope.isOpen = $scope.menu.isOpen;
+                  $scope.open = $scope.menu.isOpen;
 
                   $scope.toggle = function(){
                     $scope.menu.toggle();
-                    $scope.isOpen = $scope.menu.isOpen;
+                    $scope.open = $scope.menu.isOpen;
                   };
 
-                  $scope.$watch('isOpen', function(newValue, oldValue){
+                  $scope.$watch('open', function(newValue, oldValue){
                     if (newValue){
                       $scope.menu.open();
                     } else {
