@@ -758,26 +758,34 @@
         this.trigger.addEventListener( 'click', this.toggle.bind(this) );
     };
 
+    SVGMenu.prototype.open = function(){
+      var self = this;
+      classie.add( self.el, 'menu--anim' );
+      setTimeout( function() { classie.add( self.el, 'menu--open' );	}, 250 );
+
+      this.pathEl.stop().animate( { 'path' : this.paths.open }, 350, mina.backin, function() {
+          self.pathEl.stop().animate( { 'path' : self.paths.reset }, 700, mina.elastic );
+      } );
+      this.isOpen = true;
+    };
+
+    SVGMenu.prototype.close = function(){
+      var self = this;
+      classie.remove( self.el, 'menu--anim' );
+      setTimeout( function() { classie.remove( self.el, 'menu--open' );	}, 250 );
+
+      this.pathEl.stop().animate( { 'path' : this.paths.close }, 350, mina.easeout, function() {
+          self.pathEl.stop().animate( { 'path' : self.paths.reset }, 700, mina.elastic );
+      } );
+      this.isOpen = false;
+    }
+
     SVGMenu.prototype.toggle = function() {
-        var self = this;
-
         if( this.isOpen ) {
-            classie.remove( self.el, 'menu--anim' );
-            setTimeout( function() { classie.remove( self.el, 'menu--open' );	}, 250 );
-
-            this.pathEl.stop().animate( { 'path' : this.paths.close }, 350, mina.easeout, function() {
-                self.pathEl.stop().animate( { 'path' : self.paths.reset }, 700, mina.elastic );
-            } );
+            this.close();
+        } else {
+            this.open();
         }
-        else {
-            classie.add( self.el, 'menu--anim' );
-            setTimeout( function() { classie.add( self.el, 'menu--open' );	}, 250 );
-
-            this.pathEl.stop().animate( { 'path' : this.paths.open }, 350, mina.backin, function() {
-                self.pathEl.stop().animate( { 'path' : self.paths.reset }, 700, mina.elastic );
-            } );
-        }
-        this.isOpen = !this.isOpen;
     };
 
     var compile = function(tElement, tAttrs, transclude) {
@@ -815,7 +823,23 @@
                                 '</svg>' +
                             '</div>' +
                     '</nav>',
-                compile: compile
+                compile: compile,
+                controller: function($scope){
+                  $scope.isOpen = $scope.menu.isOpen;
+
+                  $scope.toggle = function(){
+                    $scope.menu.toggle();
+                    $scope.isOpen = $scope.menu.isOpen;
+                  };
+
+                  $scope.$watch('isOpen', function(newValue, oldValue){
+                    if (newValue){
+                      $scope.menu.open();
+                    } else {
+                      $scope.menu.close();
+                    }
+                  })
+                }
             };
         });
 })();
