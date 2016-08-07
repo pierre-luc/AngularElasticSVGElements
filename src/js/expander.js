@@ -51,7 +51,7 @@
             post: function postLink(scope, iElement, iAttrs, controller) {
                 for(var k in iElement){
                     if ("object" === typeof iElement[k]){
-                        new SVGExpander(iElement[k]);
+                        scope.expander = new SVGExpander(iElement[k]);
                     }
                 }
             }

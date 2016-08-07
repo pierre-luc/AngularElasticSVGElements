@@ -58,7 +58,7 @@
             post: function postLink(scope, iElement, iAttrs, controller) {
                 for(var k in iElement){
                     if ("object" === typeof iElement[k]){
-                        new SVGHamburger(iElement[k]);
+                        scope.hamburger = new SVGHamburger(iElement[k]);
                     }
                 }
             }

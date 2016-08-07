@@ -125,7 +125,7 @@
                     post: function postLink(scope, iElement, iAttrs, controller) {
                         for(var k in iElement){
                             if ("object" === typeof iElement[k]){
-                                new SVGButton( iElement[k], {
+                                scope.button = new SVGButton( iElement[k], {
                                     speed : { reset : 650, active : 650 },
                                     easing : { reset : mina.elastic, active : mina.elastic },
                                     effect: scope.effect
@@ -199,7 +199,7 @@
             post: function postLink(scope, iElement, iAttrs, controller) {
                 for(var k in iElement){
                     if ("object" === typeof iElement[k]){
-                        new SVGMenu(iElement[k]);
+                        scope.menu = new SVGMenu(iElement[k]);
                     }
                 }
             }
@@ -276,7 +276,7 @@
             post: function postLink(scope, iElement, iAttrs, controller) {
                 for(var k in iElement){
                     if ("object" === typeof iElement[k]){
-                        new SVGCollapser(iElement[k]);
+                        scope.collapser = new SVGCollapser(iElement[k]);
                     }
                 }
             }
@@ -371,7 +371,7 @@
             post: function postLink(scope, iElement, iAttrs, controller) {
                 for(var k in iElement){
                     if ("object" === typeof iElement[k]){
-                        new SVGDDMenu( iElement[k] );
+                        scope.dropdown = new SVGDDMenu( iElement[k] );
                     }
                 }
             }
@@ -476,7 +476,7 @@
             post: function postLink(scope, iElement, iAttrs, controller) {
                 for(var k in iElement){
                     if ("object" === typeof iElement[k]){
-                        new SVGInput( iElement[k] );
+                        scope.input = new SVGInput( iElement[k] );
                     }
                 }
             }
@@ -611,7 +611,7 @@
             post: function postLink(scope, iElement, iAttrs, controller) {
                 for(var k in iElement){
                     if ("object" === typeof iElement[k]){
-                        new SVGExpander(iElement[k]);
+                        scope.expander = new SVGExpander(iElement[k]);
                     }
                 }
             }
@@ -702,7 +702,7 @@
             post: function postLink(scope, iElement, iAttrs, controller) {
                 for(var k in iElement){
                     if ("object" === typeof iElement[k]){
-                        new SVGHamburger(iElement[k]);
+                        scope.hamburger = new SVGHamburger(iElement[k]);
                     }
                 }
             }
@@ -787,7 +787,7 @@
             post: function postLink(scope, iElement, iAttrs, controller) {
                 for(var k in iElement){
                     if ("object" === typeof iElement[k]){
-                        new SVGMenu(iElement[k]);
+                        scope.menu = new SVGMenu(iElement[k]);
                     }
                 }
             }
@@ -819,6 +819,7 @@
             };
         });
 })();
+
 (function(){
     'use strict';
 
@@ -873,7 +874,7 @@
             post: function postLink(scope, iElement, iAttrs, controller) {
                 for(var k in iElement){
                     if ("object" === typeof iElement[k]){
-                        new SVGMenu(iElement[k]);
+                        scope.menu = new SVGMenu(iElement[k]);
                     }
                 }
             }

@@ -125,7 +125,7 @@
                     post: function postLink(scope, iElement, iAttrs, controller) {
                         for(var k in iElement){
                             if ("object" === typeof iElement[k]){
-                                new SVGButton( iElement[k], {
+                                scope.button = new SVGButton( iElement[k], {
                                     speed : { reset : 650, active : 650 },
                                     easing : { reset : mina.elastic, active : mina.elastic },
                                     effect: scope.effect

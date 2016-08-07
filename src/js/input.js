@@ -66,7 +66,7 @@
             post: function postLink(scope, iElement, iAttrs, controller) {
                 for(var k in iElement){
                     if ("object" === typeof iElement[k]){
-                        new SVGInput( iElement[k] );
+                        scope.input = new SVGInput( iElement[k] );
                     }
                 }
             }

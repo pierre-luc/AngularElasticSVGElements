@@ -50,7 +50,7 @@
             post: function postLink(scope, iElement, iAttrs, controller) {
                 for(var k in iElement){
                     if ("object" === typeof iElement[k]){
-                        new SVGMenu(iElement[k]);
+                        scope.menu = new SVGMenu(iElement[k]);
                     }
                 }
             }

@@ -44,7 +44,7 @@
             post: function postLink(scope, iElement, iAttrs, controller) {
                 for(var k in iElement){
                     if ("object" === typeof iElement[k]){
-                        new SVGCollapser(iElement[k]);
+                        scope.collapser = new SVGCollapser(iElement[k]);
                     }
                 }
             }
