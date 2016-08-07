@@ -826,8 +826,6 @@
                     '</nav>',
                 compile: compile,
                 controller: function($scope){
-                  $scope.open = $scope.menu.isOpen;
-
                   $scope.toggle = function(){
                     $scope.menu.toggle();
                     $scope.open = $scope.menu.isOpen;
